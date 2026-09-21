@@ -27,7 +27,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		System.out.println("Welcome to the Restaurant!");
+System.out.println("The weekly specials are Fries 2$, Hot Dogs 5$, Onion Rings 3$, Water 1$, Cheeseburger 5$ ");
+System.out.println("What Will it be?");		
+String Fries = in.nextLine();
+String HotDog = in.nextLine();
 
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
