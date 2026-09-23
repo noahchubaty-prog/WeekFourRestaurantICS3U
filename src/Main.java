@@ -20,22 +20,29 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-	System.out.println("Welcome to the Restaurant!");
-	System.out.println("The weekly specials are Fries 2$, Hot Dogs 5$, Onion Rings 3$, Water 1$, Cheeseburger 5$ ");
-	System.out.println("What Will it be?");
-    System.out.println("How Many Hot Dogs do you want?");
-    int HotDogs = in.nextInt();
-	System.out.println("How many Fries do you want?");
-	int fries = in.nextInt();
-	System.out.println("How many Onion Rings do you want?");
-	int OnionRings = in.nextInt();
-	System.out.println("How many Bottles of Water do you want?");
-	int Water = in.nextInt();
-	System.out.println("How many Cheeseburgers do you want?");
-	int Cheeseburgers = in.nextInt();
-	
-	
+		double discount=0;
+		System.out.println("Welcome to the Restaurant!");
+		System.out.println("The weekly specials are Fries 2$, Hot Dogs 5$, Onion Rings 3$, Water 1$, Cheeseburger 5$ ");
+		System.out.println("What Will it be?");
+		System.out.println("How Many Hot Dogs do you want?");
+		int HotDogs = in.nextInt();
+		System.out.println("How many Fries do you want?");
+		int fries = in.nextInt();
+		System.out.println("How many Onion Rings do you want?");
+		int OnionRings = in.nextInt();
+		System.out.println("How many Bottles of Water do you want?");
+		int Water = in.nextInt();
+		System.out.println("How many Cheeseburgers do you want?");
+		int Cheeseburgers = in.nextInt();
+		double total = (HotDogs * 5.65) + (fries * 2.26) + (OnionRings * 3.39) + (Water * 1.13)
+				+ (Cheeseburgers * 5.65);
+		System.out.println("Total $" + total + "");
+		if (total > 50) {
+			discount = total * 20 / 100;
+
+		} else if (total > 30) {
+			
+		}
 
 	}
-
 }
