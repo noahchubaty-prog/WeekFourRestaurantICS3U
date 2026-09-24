@@ -20,7 +20,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		double discount=0;
+		double discount = 0;
+		double tax = 0, finalTotal = 0, newtotal = 0;
 		System.out.println("Welcome to the Restaurant!");
 		System.out.println("The weekly specials are Fries 2$, Hot Dogs 5$, Onion Rings 3$, Water 1$, Cheeseburger 5$ ");
 		System.out.println("What Will it be?");
@@ -41,8 +42,30 @@ public class Main {
 			discount = total * 20 / 100;
 
 		} else if (total > 30) {
-			
+			discount = total * 10 / 100;
 		}
-
+		newtotal = total - discount;
+		tax = newtotal * 13 / 100;
+		finalTotal = newtotal + tax;
+		discount*=100;
+		discount=Math.round(discount);
+		discount/=100;
+		tax*=100;
+		tax=Math.round(tax);
+		tax/=100;
+		finalTotal*=100;
+		finalTotal=Math.round(finalTotal);
+		finalTotal/=100;
+		
+		System.out.println("Discount: $" + discount);
+		System.out.println("Tax: $" + tax);
+		System.out.println("Final Total:$" + finalTotal);
+		System.out.println("Enter payment: $");
+		double payment = in.nextInt();
+		double change = payment - finalTotal;
+		change*=100;
+		change=Math.round(change);
+		change/=100;
+		System.out.println("Change: $" + change);
 	}
 }
